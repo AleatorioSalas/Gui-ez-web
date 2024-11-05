@@ -2,17 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Bam; // Asegúrate de que el modelo está importado
 use Illuminate\Http\Request;
+use App\Models\Bam; // Asegúrate de tener el modelo Bam si es necesario
 
 class BamController extends Controller
 {
-    public function index()
+    public function showBam()
     {
-        // Obtener todos los registros de 'bam' con su asociación a 'main'
-        $bams = Bam::with('main')->get();
-
-        // Retornar la vista pasando los datos obtenidos
-        return view('bam.index', compact('bams'));
+        $bams = Bam::all(); // Obtener todos los registros de la tabla bam
+        return view('bam.index', compact('bams')); // Retornar la vista con los datos
     }
 }

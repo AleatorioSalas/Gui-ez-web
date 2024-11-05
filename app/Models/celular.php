@@ -5,10 +5,9 @@ use App\Models\Main;
 
 use Illuminate\Database\Eloquent\Model;
 
-class bam extends Model
+class celular extends Model
 {
-    protected $usuarios_guiñez = 'bam';
-
+    protected $usuarios_guiñez = 'celular';
 
     public function main()
 {

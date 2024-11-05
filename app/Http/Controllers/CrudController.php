@@ -74,6 +74,5 @@ class CrudController extends Controller
         }
         
     }
-
-}
     
+}

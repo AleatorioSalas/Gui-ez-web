@@ -12,6 +12,11 @@ class User extends Authenticatable
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
+    protected $table = 'usuarios_guiñez'; // Nombre de la tabla
+    protected $primaryKey = 'ID_Nombre';  // Llave primaria personalizada
+    public $incrementing = false;         // Si la llave primaria no es autoincremental
+    protected $keyType = 'string';        // Cambia esto si el tipo de la llave primaria no es 'string'
+
     /**
      * The attributes that are mass assignable.
      *
@@ -45,4 +50,17 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    // En UsuarioGuiñez.php
+        public function bams()
+        {
+         return $this->hasMany(Bam::class, 'iD_Nombre', 'ID_Nombre');
+        }
+        public function celular()
+        {
+         return $this->hasMany(celular::class, 'ID_Nombre', 'id');
+        }
+        public function monitor()
+        {
+         return $this->hasMany(monitor::class, 'ID_Nombre', 'id');
+        }
 }

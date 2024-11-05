@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
     <script src="https://kit.fontawesome.com/4df9f098ca.js" crossorigin="anonymous"></script>
     <title>
@@ -117,6 +119,8 @@
                         <a href="" data-bs-toggle="modal" data-bs-target="#modalEditar{{$item->ID_Nombre}}"
                             class="btn btn-warning btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
                         <a href="{{route("crud.delete",$item->ID_Nombre)}}" onclick="res()" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></a>
+                        <a href="{{ route('bam.index') }}" title="Ir a la página secundaria">
+                            <i class="fas fa-arrow-right"></i> Ir a la página secundaria </a>
                     </td>
 
 

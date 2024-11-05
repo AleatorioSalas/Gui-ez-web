@@ -1,14 +1,12 @@
 <?php
 
 namespace App\Models;
-use App\Models\Main;
 
 use Illuminate\Database\Eloquent\Model;
 
-class bam extends Model
+class computador extends Model
 {
-    protected $usuarios_guiñez = 'bam';
-
+    protected $table = 'computador';
 
     public function main()
 {
